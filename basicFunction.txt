@@ -1,0 +1,144 @@
+function a(){
+    return 35;
+}
+console.log(a())
+
+-----   function returns 35 whitch is printed to the console    -----
+
+function a(){
+    return 4;
+}
+console.log(a()+a());
+
+-----   function return 4 (each time) print result 8   -----
+
+function a(b){
+    return b;
+}
+console.log(a(2)+a(4));
+
+-----   returns 2 / returns 4 / displays 6     -----
+
+function a(b){
+    console.log(b);
+    return b*3;
+}
+console.log(a(3));
+
+-----   prints 3 / return 3*3 / prints 9    -----
+
+function a(b){
+    return b*4;
+    console.log(b);
+}
+console.log(a(10));
+
+-----   returns 10*4 (b*4) the console.log inside the function is ignored due to the return exiting the function
+        prints 40    -----
+
+function a(b){
+    if(b<10) {
+        return 2;
+    }
+    else     {
+        return 4;
+    }
+    console.log(b);
+}
+console.log(a(15));
+
+-----   returns and prints 4    -----
+
+function a(b,c){
+    return b*c;
+}
+console.log(10,3);
+console.log( a(3,10) );
+
+-----   prints 10 3 / returns and prints 30    -----
+
+function a(b){
+    for(var i=0; i<10; i++){
+        console.log(i);
+    }
+    return i;
+}
+console.log(3);
+console.log(4);
+
+-----   print 3 / print 4    -----
+
+function a(){
+    for(var i=0; i<10; i++){
+        i = i +2;
+        console.log(i);
+    }
+}
+a();
+
+-----   prints 2 , 5, 8, 11    -----
+
+function a(b,c){
+    for(var i=b; i<c; i++) {
+       console.log(i);
+   }
+   return b*c;
+}
+a(0,10);
+console.log(a(0,10));
+
+-----    prints 0-9 twice due to the console.log inside the function then returns 0*10 printing 0   -----
+
+function a(){
+    for(var i=0; i<10; i++){
+       for(var j=0; j<10; j++){
+           console.log(j);
+       }
+       console.log(i);
+    }
+}
+
+-----   the function is never called so noting is printed and no return   -----
+
+function a(){
+    for(var i=0; i<10; i++){
+        for(var j=0; j<10; j++){
+            console.log(i,j);
+        }
+        console.log(j,i);
+    }
+}
+
+-----   the function is never called so noting is printed and no return    -----
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+}
+console.log(z);
+
+-----   prints 10 as the function is never called so z never changes    -----
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+}
+a();
+console.log(z);
+
+-----   function is called changing z to 15 / prints 15 / prints 10    -----
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+    return z;
+}
+z = a();
+console.log(z);
+
+-----   prints 15 / prints 15    -----
+
+
